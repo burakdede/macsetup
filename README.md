@@ -1,38 +1,46 @@
 # MacOS Setup Guide
 
+Guide for setting up my machine.
+
 ## Clean MacOS Installation
 
-- [offical guide](https://support.apple.com/en-us/HT204904)
+Use this section if I am installing the OS from scratch and don't need anything from the disk. 
+Most of my stuff backed up and stored in remote anyway so this option should be the one 
+
+- RTFM [offical guide](https://support.apple.com/en-us/HT204904)
+- this needs active internet connection!
 - restart machine with `CMD + R` to start recovery installation
 - wipe out disk entirely
 	- select `APFS` as file system
-	- leave default name
-	- done!
-- install macOS!
+	- leave name and others default
+- install macOS from scratch
 
 
 ## Prerequisite Apps
 
+These are the tools and apps needed for later stages of the installation.
+
 ### install developer tools along with Xcode
-`xcode-select --install`
-`sudo xcodebuild -license`
+- `xcode-select --install` this includes stuff like gcc and developer toolchain needed by most program/apps
+- `sudo xcodebuild -license` even though you don't need xcode you need to agree!
 
 ### install homebrew
-`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 ### install cask (homebrew but for apps)
-`brew tap caskroom/cask`
+- `brew tap caskroom/cask`
 
 ### install git & configure
-`brew install git`
-git config --global user.email 'me@example.com'
-git config --global user.name 'Burak Dede'
+- `brew install git`
+- `git config --global user.email 'me@example.com'`
+- `git config --global user.name 'Burak Dede'`
+- symlink `.gitconfig` and `.gitignore_global`
 
 ### add sshkey for github and others
 - [creating new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 - [adding ssh key to github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
-# MacOS System Settings
+## MacOS System Settings
 
 ### Dock
 - auto hide to bottom
@@ -52,7 +60,7 @@ git config --global user.name 'Burak Dede'
 ### Spaces
 - Enable spaces (press F3 and add as much as space 4 optimum)
 - Change default shortcut for switch
-	- default is `Ctrl - right/left`
+	- default is `Ctrl - Right/Left Arrow`
 	- `System Settings -> Keyboard -> Shortcut -> Mission Control -> Switch to Desktop` 
 	- make it `Ctrl - 1/2/3/4`
 
