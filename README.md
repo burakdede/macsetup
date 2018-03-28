@@ -27,7 +27,15 @@ These are the tools and apps needed for later stages of the installation.
 - `sudo xcodebuild -license` even though you don't need xcode you need to agree!
 
 ### install homebrew
-- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+```sh
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+brew tap homebrew/versions
+brew tap homebrew/bundle
+brew tap homebrew/core
+brew tap caskroom/cask
+brew tap caskroom/fonts
+```
+
 
 ### install cask (like brew but for apps)
 - `brew tap caskroom/cask`
@@ -101,13 +109,148 @@ java -version
 echo $JAVA_HOME
 ```
 
+### Python
+
+```sh
+brew install python
+pip3 install virtualenv
+pip3 install virtualenvwrapper
+```
+
+> TODO: update with pip packages
+
+### Ruby
+
+```
+brew install ruby
+brew install rbenv
+```
+
+### Javascript & Node
+```sh
+brew install node
+```
+
+> TODO: update this section soon
+
+## Brew Packages
+
+```sh
+brew intall bash (conf - https://apple.stackexchange.com/questions/193411/update-bash-to-version-4-0-on-osx)
+brew install wget --with-iri
+
+brew install mas (conf - https://github.com/mas-cli/mas)
+mas signin me@example.com
 
 
+brew install coreutils
+brew install packer
+
+brew install mysql
+mysql_secure_installation
+brew services start mysql # autostart mysql deamon
+
+brew install imagemagick
+brew install cmake
+
+brew install postgresql
+brew services start postgresql # autostart postresql deamon
+
+brew install mongodb
+brew services start mongodb # autostart mongodb deamon
+
+brew install automake
+brew install youtube-dl
+
+brew install awscli
+aws configure # configure access and secret key
+
+brew install httpie
+brew install gradle
+
+brew install redis
+brew services start redis # autostart redis deamon
+
+brew install ffmpeg
+brew install maven
+brew install watchman
+brew install ant
+brew install asciinema
+brew install heroku
+brew install tmux
+brew install gcc
+brew install htop
+brew install jq
+brew install irssi
+brew install nmap
+
+brew install curl --with-openssl
+brew link --force curl
+
+brew install protobuf
+brew install unrar
+brew install gdb
+brew install geoip
+brew install tree
+brew insatll sqlite
+brew install watch
+brew install ack
+brew install readline
+brew install hub
+brew install the_silver_searcher
+```
 
 
+## Apps to Install
+
+```sh
+brew cask install google-chrome (conf)
+brew cask install firefox
+brew cask install docker
+brew cask install iterm2 (conf)
+brew cask install evernote
+brew cask install skype
+brew cask install spectacle (conf)
+brew cask install lastpass
+
+brew cask install android-studio
+brew cask install android-sdk
+brew cask install android-platform-tools
+echo 'export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"' >> ~/.bash_profile
+
+brew cask install intellij-idea (conf)
+brew cask install intellij-idea-ce
+brew cask install xcode
+brew cask install the-unarchiver
+brew cask install slack
+brew cask install sublime-text
+brew cask install handbrake
+brew cask install appcleaner
+brew cask install Macvim
+brew cask install Alfred (conf)
+
+brew cask install Vagrant
+brew cask install vagrant-manager
+
+brew cask install Postman
+brew cask install spotify
+brew cask install Flux
+brew cask install VLC
+brew cask install Cloudapp (conf)
+brew cask install Dropbox
+brew cask install Clipy (conf)
+brew cask install Virtualbox # open system settings -> security -> allow kernel extension
+brew cask install sourcetree
+brew cask install google-backup-and-sync
+```
 
 
+### IntelliJ Settings & Plugins
 
+Go to `Preferences -> Plugins`
+- Protobuf
+- Key Promoter X
+- Lombok
 
 
 
