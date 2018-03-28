@@ -21,12 +21,12 @@ Most of my stuff backed up and stored in remote anyway so this option should be 
 
 These are the tools and apps needed for later stages of the installation.
 
-### install developer tools along with Xcode
+#### install developer tools along with Xcode
 - `xcode-select --install` this includes stuff like gcc and developer toolchain needed by most program/apps
 - install Xcode but it is optional (takes ages on slow connection)
 - `sudo xcodebuild -license` even though you don't need xcode you need to agree!
 
-### install homebrew
+#### install homebrew
 ```sh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 brew tap homebrew/versions
@@ -37,48 +37,48 @@ brew tap caskroom/fonts
 ```
 
 
-### install cask (like brew but for apps)
+#### install cask (like brew but for apps)
 - `brew tap caskroom/cask`
 
-### install git & configure
+#### install git & configure
 - `brew install git`
 - `git config --global user.email 'me@example.com'`
 - `git config --global user.name 'Burak Dede'`
 - symlink `.gitconfig` and `.gitignore_global`
 
-### add sshkey for github and others
+#### add sshkey for github and others
 - [creating new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 - [adding ssh key to github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 ## MacOS System Settings
 
-### Dock
+#### Dock
 - auto hide to bottom
 - make size smaller
 - add `Applications` folder to shortcuts
 - add `Home` folder to shortcuts
 
-### Keyboard & Mouse
+#### Keyboard & Mouse
 - `System Settings -> Keyboard -> Key Repeat & Delay` All the way to the right
 - Show emoji bar in menu bar (I am terrible at those)
 - `System Settings -> Trackpad` Enable almost all touch features (eg. tap to click)
 
-### Screen Saver & Sleep
+#### Screen Saver & Sleep
 - `Desktop & Screen Saver -> Hot corners` Enable hot corners for quick lock
 - Left down corner seems like a habit for me, use it
 
-### Spaces
+#### Spaces
 - Enable spaces (press F3 and add as much as space 4 optimum)
 - Change default shortcut for switch
 	- default is `Ctrl - Right/Left Arrow`
 	- `System Settings -> Keyboard -> Shortcut -> Mission Control -> Switch to Desktop` 
 	- make it `Ctrl - 1/2/3/4`
 
-### Security
+#### Security
 - Turn off guest account
 - Turn on firewall
 
-### Finder
+#### Finder
 - `Finder -> Pref -> New Finder Show Home`
 - `Finder -> Pref -> Sidebard do not show Recents, Music, Recent Tags`
 - `Finder -> Pref -> Advanced`
@@ -90,7 +90,7 @@ brew tap caskroom/fonts
 
 ## Programming Language SDK & Setups
 
-### Java & JDK
+#### Java & JDK
 
 Current default version is `9` so beware of that!
 
@@ -109,7 +109,7 @@ java -version
 echo $JAVA_HOME
 ```
 
-### Python
+#### Python
 
 ```sh
 brew install python
@@ -119,21 +119,21 @@ pip3 install virtualenvwrapper
 
 > TODO: update with pip packages
 
-### Ruby
+#### Ruby
 
 ```
 brew install ruby
 brew install rbenv
 ```
 
-### Javascript & Node
+#### Javascript & Node
 ```sh
 brew install node
 ```
 
 > TODO: update this section soon
 
-## Brew Packages
+## Brew Packages
 
 ```sh
 brew intall bash (conf - https://apple.stackexchange.com/questions/193411/update-bash-to-version-4-0-on-osx)
@@ -199,7 +199,7 @@ brew install readline
 brew install hub
 brew install the_silver_searcher
 ```
-
+ 
 
 ## Apps to Install
 
@@ -244,8 +244,9 @@ brew cask install sourcetree
 brew cask install google-backup-and-sync
 ```
 
+> `brew cleanup` `brew cask cleanup` to cleanup the mess
 
-### IntelliJ Settings & Plugins
+## IntelliJ Settings & Plugins
 
 Go to `Preferences -> Plugins`
 - Protobuf
