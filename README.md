@@ -2,6 +2,13 @@
 
 Guide for setting up my machine.
 
+TODO
+----
+- make programming language section more detailed for each language with packages etc.
+- add bash_profile and dotfiles installation
+- IntelliJ settings and preferences section needed
+- add aliases for most of the stuff probably along with bash_profile installation
+
 
 ## Clean MacOS Installation
 
@@ -28,7 +35,7 @@ These are the tools and apps needed for later stages of the installation.
 
 #### install homebrew
 ```sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap homebrew/versions
 brew tap homebrew/bundle
 brew tap homebrew/core
