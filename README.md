@@ -8,6 +8,7 @@ TODO
 - add bash_profile and dotfiles installation
 - IntelliJ settings and preferences section needed
 - add aliases for most of the stuff probably along with bash_profile installation
+- maybe add SDKMAN but not sure about how useful and well maintained
 
 
 ## Clean MacOS Installation
@@ -149,9 +150,10 @@ brew install wget --with-iri
 brew install mas (conf - https://github.com/mas-cli/mas)
 mas signin me@example.com
 
-
 brew install coreutils
 brew install packer
+brew install terraform
+brew install vault
 
 brew install mysql
 mysql_secure_installation
@@ -190,10 +192,8 @@ brew install htop
 brew install jq
 brew install irssi
 brew install nmap
-
 brew install curl --with-openssl
 brew link --force curl
-
 brew install protobuf
 brew install unrar
 brew install gdb
@@ -235,8 +235,9 @@ brew cask install handbrake
 brew cask install appcleaner
 brew cask install Macvim
 brew cask install Alfred (conf)
+brew cask install macdown
 
-brew cask install Vagrant
+brew cask install vagrant
 brew cask install vagrant-manager
 
 brew cask install Postman
