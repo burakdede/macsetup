@@ -4,9 +4,7 @@ Guide for setting up my machine.
 
 TODO
 ----
-- add bash_profile and dotfiles installation
-- add aliases for most of the stuff probably along with bash_profile installation
-
+- add dotfiles installation and aliases
 
 ## Clean MacOS Installation
 
@@ -74,6 +72,7 @@ brew tap caskroom/fonts
 
 #### Spaces
 - Enable spaces (press F3 and add as much as space 4 optimum)
+- Disable `Automatic rearranging of Space`
 - Change default shortcut for switch
 	- default is `Ctrl - Right/Left Arrow`
 	- `System Settings -> Keyboard -> Shortcut -> Mission Control -> Switch to Desktop`
