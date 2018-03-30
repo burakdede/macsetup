@@ -8,7 +8,6 @@ TODO
 - add bash_profile and dotfiles installation
 - IntelliJ settings and preferences section needed
 - add aliases for most of the stuff probably along with bash_profile installation
-- add sublime text plugins and configuration
 - maybe add SDKMAN but not sure about how useful and well maintained
 
 
