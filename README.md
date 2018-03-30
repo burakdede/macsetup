@@ -4,11 +4,8 @@ Guide for setting up my machine.
 
 TODO
 ----
-- make programming language section more detailed for each language with packages etc.
 - add bash_profile and dotfiles installation
-- IntelliJ settings and preferences section needed
 - add aliases for most of the stuff probably along with bash_profile installation
-- maybe add SDKMAN but not sure about how useful and well maintained
 
 
 ## Clean MacOS Installation
@@ -94,6 +91,12 @@ brew tap caskroom/fonts
 	- keep folders on top when sorting by name
 - remove tags everywhere they are annoying
 - move `Home` folder and `Dropbox` to sidebar
+- Add `New Folder`, 'Delete', 'Path' to toolbar
+
+## Spotlight
+- turn off indexing and use Alfred
+```sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist```
+- uncheck everything related to indexing
 
 
 ## Programming Language SDK & Setups
