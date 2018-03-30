@@ -146,40 +146,29 @@ brew install node
 ```sh
 brew intall bash (conf - https://apple.stackexchange.com/questions/193411/update-bash-to-version-4-0-on-osx)
 brew install wget --with-iri
-
 brew install mas (conf - https://github.com/mas-cli/mas)
 mas signin me@example.com
-
 brew install coreutils
 brew install packer
 brew install terraform
 brew install vault
-
 brew install mysql
 mysql_secure_installation
 brew services start mysql # autostart mysql deamon
-
 brew install imagemagick
 brew install cmake
-
 brew install postgresql
 brew services start postgresql # autostart postresql deamon
-
 brew install mongodb
 brew services start mongodb # autostart mongodb deamon
-
 brew install automake
 brew install youtube-dl
-
 brew install awscli
 aws configure # configure access and secret key
-
 brew install httpie
 brew install gradle
-
 brew install redis
 brew services start redis # autostart redis deamon
-
 brew install ffmpeg
 brew install maven
 brew install watchman
@@ -219,12 +208,10 @@ brew cask install evernote
 brew cask install skype
 brew cask install spectacle (conf)
 brew cask install lastpass
-
 brew cask install android-studio
 brew cask install android-sdk
 brew cask install android-platform-tools
 echo 'export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"' >> ~/.bash_profile
-
 brew cask install intellij-idea (conf)
 brew cask install intellij-idea-ce
 brew cask install xcode
@@ -236,10 +223,8 @@ brew cask install appcleaner
 brew cask install Macvim
 brew cask install Alfred (conf)
 brew cask install macdown
-
 brew cask install vagrant
 brew cask install vagrant-manager
-
 brew cask install Postman
 brew cask install spotify
 brew cask install Flux
@@ -265,24 +250,34 @@ Go to `Preferences -> Plugins`
 
 ## Sublime Text & Plugins
 
-> don't forget to install package control.
-
+- remove current sublime `User` directory
+- symlink one in the dotfiles to fresh install
 - Install Package Control - https://packagecontrol.io/installation
-- Emmet
-- SideBarEnchancements
-- SublimeLinter
-- BracketHighlighter
-- HTML5
-- CSS3
-- GitGutter
-- Sass
-- jQuery
-- All Autocomplete
-- ColorHighlighter
+- restart
+
+> Check sublime directory in `dotfiles` and try to symlink it to `/Library/Application Support/Sublime Text 3/Packages/User`
+
+Plugins that will be installed by default
+- A File Icon
 - AdvancedNewFile
-- HTML Css Js Prettify
+- All Autocomplete
+- BracketHighlighter
+- Color Highlighter
+- ColorPicker
+- CSS3
+- DocBlockr
+- Emmet
 - Git
-- DockBlockr
-- Theme SpaceGray
+- GitGutter
+- HTML-CSS-JS Prettify
+- HTML5
+- jQuery
+- Markdown Preview
+- Package Control
+- Sass
+- SideBarEnhancements
+- SublimeCodeIntel
+- SublimeLinter
+- Theme - Spacegray
 
 > For synchronizing use [sublime settings doc](https://packagecontrol.io/docs/syncing)
