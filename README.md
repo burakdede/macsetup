@@ -8,13 +8,14 @@ TODO
 - add bash_profile and dotfiles installation
 - IntelliJ settings and preferences section needed
 - add aliases for most of the stuff probably along with bash_profile installation
+- add sublime text plugins and configuration
 - maybe add SDKMAN but not sure about how useful and well maintained
 
 
 ## Clean MacOS Installation
 
-Use this section if I am installing the OS from scratch and don't need anything from the disk. 
-Most of my stuff backed up and stored in remote anyway so this option should be the one 
+Use this section if I am installing the OS from scratch and don't need anything from the disk.
+Most of my stuff backed up and stored in remote anyway so this option should be the one
 
 - RTFM [offical guide](https://support.apple.com/en-us/HT204904)
 - this needs active internet connection!
@@ -79,7 +80,7 @@ brew tap caskroom/fonts
 - Enable spaces (press F3 and add as much as space 4 optimum)
 - Change default shortcut for switch
 	- default is `Ctrl - Right/Left Arrow`
-	- `System Settings -> Keyboard -> Shortcut -> Mission Control -> Switch to Desktop` 
+	- `System Settings -> Keyboard -> Shortcut -> Mission Control -> Switch to Desktop`
 	- make it `Ctrl - 1/2/3/4`
 
 #### Security
@@ -206,7 +207,7 @@ brew install readline
 brew install hub
 brew install the_silver_searcher
 ```
- 
+
 
 ## Apps to Install
 
@@ -260,7 +261,29 @@ Go to `Preferences -> Plugins`
 - Protobuf
 - Key Promoter X
 - Lombok
+- Markdown Support
+- Docker Integration
 
+## Sublime Text & Plugins
 
+> don't forget to install package control.
 
+- Install Package Control - https://packagecontrol.io/installation
+- Emmet
+- SideBarEnchancements
+- SublimeLinter
+- BracketHighlighter
+- HTML5
+- CSS3
+- GitGutter
+- Sass
+- jQuery
+- All Autocomplete
+- ColorHighlighter
+- AdvancedNewFile
+- HTML Css Js Prettify
+- Git
+- DockBlockr
+- Theme SpaceGray
 
+> For synchronizing use [sublime settings doc](https://packagecontrol.io/docs/syncing)
