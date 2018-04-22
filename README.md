@@ -2,13 +2,10 @@
 
 Guide for setting up my machine.
 
-TODO
-----
-- add dotfiles installation and aliases
 
 ## Clean MacOS Installation
 
-Use this section if I am installing the OS from scratch and don't need anything from the disk.
+If I am installing the OS from scratch and don't need anything from the disk.
 Most of my stuff backed up and stored in remote anyway so this option should be the one
 
 - RTFM [offical guide](https://support.apple.com/en-us/HT204904)
@@ -21,8 +18,6 @@ Most of my stuff backed up and stored in remote anyway so this option should be 
 
 
 ## Prerequisite Apps
-
-These are the tools and apps needed for later stages of the installation.
 
 #### install developer tools along with Xcode
 - `xcode-select --install` this includes stuff like gcc and developer toolchain needed by most program/apps
@@ -39,17 +34,16 @@ brew tap caskroom/cask
 brew tap caskroom/fonts
 ```
 
-
-#### install cask (like brew but for apps)
+#### install cask
 - `brew tap caskroom/cask`
 
-#### install git & configure
+#### install git
 - `brew install git`
 - `git config --global user.email 'me@example.com'`
 - `git config --global user.name 'Burak Dede'`
 - symlink `.gitconfig` and `.gitignore_global`
 
-#### add sshkey for github and others
+#### add sshkey for github
 - [creating new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 - [adding ssh key to github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
@@ -92,7 +86,7 @@ brew tap caskroom/fonts
 - move `Home` folder and `Dropbox` to sidebar
 - Add `New Folder`, 'Delete', 'Path' to toolbar
 
-## Spotlight
+#### Spotlight
 - turn off indexing and use Alfred
 ```sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist```
 - uncheck everything related to indexing
@@ -102,14 +96,14 @@ brew tap caskroom/fonts
 
 #### Java & JDK
 
-Current default version is `9` so beware of that!
+Current default version is `9`
 
 ```sh
 brew tap caskroom/versions
 brew cask install java8
 ```
 
-Set the JAVA_HOME env. variable and check installed JDKs
+Set the `JAVA_HOME` env. variable and check installed JDKs
 
 ```sh
 /usr/libexec/java_home -V
@@ -127,8 +121,6 @@ pip3 install virtualenv
 pip3 install virtualenvwrapper
 ```
 
-> TODO: update with pip packages
-
 #### Ruby
 
 ```
@@ -141,14 +133,12 @@ brew install rbenv
 brew install node
 ```
 
-> TODO: update this section soon
-
 ## Brew Packages
 
 ```sh
-brew intall bash (conf - https://apple.stackexchange.com/questions/193411/update-bash-to-version-4-0-on-osx)
+brew intall bash  #(conf - https://apple.stackexchange.com/questions/193411/update-bash-to-version-4-0-on-osx)
 brew install wget --with-iri
-brew install mas (conf - https://github.com/mas-cli/mas)
+brew install mas #(conf - https://github.com/mas-cli/mas)
 mas signin me@example.com
 brew install coreutils
 brew install packer
@@ -241,6 +231,7 @@ brew cask install google-backup-and-sync
 
 > `brew cleanup` `brew cask cleanup` to cleanup the mess
 
+
 ## IntelliJ Settings & Plugins
 
 Go to `Preferences -> Plugins`
@@ -249,6 +240,7 @@ Go to `Preferences -> Plugins`
 - Lombok
 - Markdown Support
 - Docker Integration
+
 
 ## Sublime Text & Plugins
 
