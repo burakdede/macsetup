@@ -227,6 +227,7 @@ brew cask install Clipy (conf)
 brew cask install Virtualbox # open system settings -> security -> allow kernel extension
 brew cask install sourcetree
 brew cask install google-backup-and-sync
+brew cask install datagrip
 ```
 
 > `brew cleanup` `brew cask cleanup` to cleanup the mess
