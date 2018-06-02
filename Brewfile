@@ -86,5 +86,6 @@ cask "vagrant-manager"
 cask "virtualbox"
 cask "vlc"
 cask "caskroom/versions/java8"
+cask "datagrip"
 mas "Amphetamine", id: 937984704
 mas "Xcode", id: 497799835
