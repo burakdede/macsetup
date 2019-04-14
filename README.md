@@ -162,7 +162,7 @@ echo $JAVA_HOME
 #### Python
 
 ```sh
-brew install python
+brew install python3
 pip3 install virtualenv
 pip3 install virtualenvwrapper
 ```
@@ -280,6 +280,7 @@ brew cask install google-backup-and-sync
 brew cask install datagrip
 brew cask install pycharm-ce
 brew cask install pycharm
+brew cask install dash
 ```
 
 > `brew cleanup` to cleanup the mess
