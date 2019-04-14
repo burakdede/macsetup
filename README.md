@@ -234,6 +234,7 @@ brew install hub
 brew install the_silver_searcher
 brew install cassandra
 brew services start cassandra
+brew install yarn
 ```
 
 
@@ -276,6 +277,8 @@ brew cask install Virtualbox # open system settings -> security -> allow kernel 
 brew cask install sourcetree
 brew cask install google-backup-and-sync
 brew cask install datagrip
+brew cask install pycharm-ce
+brew cask install pycharm
 ```
 
 > `brew cleanup` to cleanup the mess
