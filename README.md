@@ -32,6 +32,13 @@ brew tap caskroom/cask
 brew tap caskroom/fonts
 ```
 
+must know brew commands (all start with brew, duh..)
+* `brew install formulae-name` (install package-name)
+* `brew list` (list all the package installed)
+* `brew update` (fetch new version of brew and updates all formulaes)
+* `brew upgrade formulae-name` (update formulae to latest version)
+* `brew uninstall formulae-name` (remove formulae from the system)
+
 #### install cask
 - `brew tap caskroom/cask`
 
@@ -227,7 +234,7 @@ brew cask install google-backup-and-sync
 brew cask install datagrip
 ```
 
-> `brew cleanup` `brew cask cleanup` to cleanup the mess
+> `brew cleanup` to cleanup the mess
 
 
 ## IntelliJ Settings & Plugins
