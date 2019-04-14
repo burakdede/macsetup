@@ -35,11 +35,17 @@ brew tap caskroom/fonts
 must know brew commands (all start with brew, duh..)
 * `brew install formulae-name` (install package-name)
 * `brew list` (list all the package installed)
+* `brew search formulae-name` (search brew repo for formulae)
 * `brew update` (fetch new version of brew and updates all formulaes)
 * `brew upgrade formulae-name` (update formulae to latest version)
 * `brew uninstall formulae-name` (remove formulae from the system)
+* `brew cleanup` (remove any old packages that is not used anymore - huge disk space saver)
+* `brew doctor` (will check if any error related to brew occur in system)
 
-#### install cask
+> thats too many commands to know, add alias for it maybe?
+`alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'`
+
+#### install cask for gui apps
 - `brew tap caskroom/cask`
 
 #### install git
