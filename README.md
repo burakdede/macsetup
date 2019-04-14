@@ -235,6 +235,7 @@ brew install the_silver_searcher
 brew install cassandra
 brew services start cassandra
 brew install yarn
+brew install typescript
 ```
 
 
