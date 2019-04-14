@@ -104,6 +104,42 @@ must know brew commands (all start with brew, duh..)
 
 ## Programming Language SDK & Setups
 
+#### SDKMan
+
+```sh
+curl -s "https://get.sdkman.io" | bash
+```
+
+in new terminal after installation
+
+```sh
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk version
+```
+
+
+```sh
+sdk install java
+sdk install scala
+sdk install kotlin
+sdk install visualvm
+sdk install maven
+sdk install springboot
+sdk install sbt
+sdk install gradle
+```
+
+> [more usage commands](https://sdkman.io/usage)
+* `sdk uninstall package`
+* `sdk install package 2.3.4`
+* `sdk list`
+* `sdk list java/scala`
+* `sdk current java`
+* `sdk defualt scala 2.11.6`
+* `sdk selfupdate`
+* `sdk update`
+
+
 #### Java & JDK
 
 Current default version is `9`
