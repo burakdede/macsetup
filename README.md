@@ -5,24 +5,22 @@ Guide for setting up my machine.
 
 ## Clean MacOS Installation
 
-If I am installing the OS from scratch and don't need anything from the disk.
-Most of my stuff backed up and stored in remote anyway so this option should be the one
+If I am comfortable with wiping the whole disk, go with this option.
 
-- RTFM [offical guide](https://support.apple.com/en-us/HT204904)
-- this needs active internet connection!
+- [offical guide to installing MacOS from scratch](https://support.apple.com/en-us/HT204904)
 - restart machine with `CMD + R` to start recovery installation
 - wipe out disk entirely
 	- select `APFS` as file system
 	- leave name and others as default
-- install macOS from scratch
+- continue following menus
 
 
 ## Prerequisite Apps
 
 #### install developer tools along with Xcode
-- `xcode-select --install` this includes stuff like gcc and developer toolchain needed by most program/apps
-- install Xcode but it is optional (takes ages on slow connection)
-- `sudo xcodebuild -license` even though you don't need xcode you need to agree!
+- `xcode-select --install` this includes stuff like `gcc` and `developer toolchain` needed by most program/apps
+- install `Xcode` (option and takes ages)
+- `sudo xcodebuild -license` (even though you don't need xcode you need to agree!)
 
 #### install homebrew
 ```sh
@@ -56,38 +54,37 @@ brew tap caskroom/fonts
 - add `Home` folder to shortcuts
 
 #### Keyboard & Mouse
-- `System Settings -> Keyboard -> Key Repeat & Delay` All the way to the right
-- Show emoji bar in menu bar (I am terrible at those)
-- `System Settings -> Trackpad` Enable almost all touch features (eg. tap to click)
+- `System Settings -> Keyboard -> Key Repeat & Delay` All the way to the right = no delay
+- `System Settings -> Trackpad` enable almost all of them somehow they are useful
 
 #### Screen Saver & Sleep
-- `Desktop & Screen Saver -> Hot corners` Enable hot corners for quick lock
-- Left down corner seems like a habit for me, use it
+- `Desktop & Screen Saver -> Hot corners` Enable hotcorners
+- I use `Left-Down` corner for this.
 
 #### Spaces
-- Enable spaces (press F3 and add as much as space 4 optimum)
+- Enable spaces
 - Disable `Automatic rearranging of Space`
 - Change default shortcut for switch
 	- default is `Ctrl - Right/Left Arrow`
 	- `System Settings -> Keyboard -> Shortcut -> Mission Control -> Switch to Desktop`
-	- make it `Ctrl - 1/2/3/4`
+	- new shortcut for it `Ctrl - 1/2/3/4....`
 
 #### Security
 - Turn off guest account
 - Turn on firewall
 
 #### Finder
-- `Finder -> Pref -> New Finder Show Home`
-- `Finder -> Pref -> Sidebard do not show Recents, Music, Recent Tags`
+- `Finder -> Pref -> New Finder Show Home` (start from home folder)
+- `Finder -> Pref -> Sidebar do not show Recents, Music, Recent Tags` (useless, I rarely use those folders)
 - `Finder -> Pref -> Advanced`
 	- show all filename extensions
 	- keep folders on top when sorting by name
-- remove tags everywhere they are annoying
+- remove tags (I never used this feature)
 - move `Home` folder and `Dropbox` to sidebar
-- Add `New Folder`, 'Delete', 'Path' to toolbar
+- Add `New Folder`, 'Delete', 'Path' to toolbar 
 
-#### Spotlight
-- turn off indexing and use Alfred
+#### Spotlight
+- turn off file/folder indexing (I use Alfred for this)
 ```sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist```
 - uncheck everything related to indexing
 
