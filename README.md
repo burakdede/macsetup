@@ -42,8 +42,9 @@ must know brew commands (all start with brew, duh..)
 * `brew cleanup` (remove any old packages that is not used anymore - huge disk space saver)
 * `brew doctor` (will check if any error related to brew occur in system)
 
-> thats too many commands to know, add alias for it maybe?
-`alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'`
+```sh
+alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
+```
 
 #### install cask for gui apps
 - `brew tap caskroom/cask`
@@ -93,8 +94,7 @@ must know brew commands (all start with brew, duh..)
 	- show all filename extensions
 	- keep folders on top when sorting by name
 - remove tags (I never used this feature)
-- move `Home` folder and `Dropbox` to sidebar
-- Add `New Folder`, 'Delete', 'Path' to toolbar 
+- move `Home` folder to sidebar
 
 #### Spotlight
 - turn off file/folder indexing (I use Alfred for this)
@@ -191,28 +191,21 @@ brew install packer
 brew install terraform
 brew install vault
 brew install mysql
-mysql_secure_installation
-brew services start mysql # autostart mysql deamon
+mysql_secure_installation # brew services start mysql # autostart mysql deamon
 brew install imagemagick
 brew install cmake
-brew install postgresql
-brew services start postgresql # autostart postresql deamon
-brew install mongodb
-brew services start mongodb # autostart mongodb deamon
+brew install postgresql # brew services start postgresql # autostart postresql deamon
+brew install mongodb # brew services start mongodb # autostart mongodb deamon
 brew install automake
 brew install youtube-dl
 brew install awscli
 aws configure # configure access and secret key
 brew install httpie
 brew install gradle
-brew install redis
-brew services start redis # autostart redis deamon
+brew install redis # brew services start redis # autostart redis deamon
 brew install ffmpeg
 brew install maven
 brew install watchman
-brew install ant
-brew install asciinema
-brew install heroku
 brew install tmux
 brew install gcc
 brew install htop
@@ -232,8 +225,7 @@ brew install ack
 brew install readline
 brew install hub
 brew install the_silver_searcher
-brew install cassandra
-brew services start cassandra
+brew install cassandra # brew services start cassandra
 brew install yarn
 brew install typescript
 ```
@@ -246,27 +238,15 @@ brew cask install google-chrome (conf)
 brew cask install firefox
 brew cask install docker
 brew cask install iterm2 (conf)
-brew cask install evernote
-brew cask install skype
 brew cask install spectacle (conf)
 brew cask install lastpass
-brew cask install android-studio
-brew cask install android-sdk
-brew cask install android-platform-tools
-echo 'export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"' >> ~/.bash_profile
-brew cask install intellij-idea (conf)
 brew cask install intellij-idea-ce
 brew cask install xcode
 brew cask install the-unarchiver
-brew cask install slack
 brew cask install sublime-text
-brew cask install handbrake
-brew cask install appcleaner
 brew cask install Macvim
 brew cask install Alfred (conf)
 brew cask install macdown
-brew cask install vagrant
-brew cask install vagrant-manager
 brew cask install Postman
 brew cask install spotify
 brew cask install Flux
@@ -279,7 +259,6 @@ brew cask install sourcetree
 brew cask install google-backup-and-sync
 brew cask install datagrip
 brew cask install pycharm-ce
-brew cask install pycharm
 brew cask install dash
 ```
 
