@@ -1,0 +1,21 @@
+[user]
+	name = Burak Dede
+	email = burak@burakdede.com
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+	excludesfiles = ~/.gitignore_global
+[alias]
+	s = status -s # show status in short format
+	st = status # show status
+	# some log options with different visuals
+	lol = log --all --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --graph --decorate --no-merges
+	lols = log --all --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --graph --decorate --stat --no-merges
+[credential]
+	helper = osxkeychain
