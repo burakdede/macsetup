@@ -3,7 +3,6 @@
 ./scripts/install.sh
 ./scripts/git.sh
 ./scripts/brew-stuff.sh
-./scripts/macappstore.sh
 ./scripts/sdk.sh
 ./scripts/os-defaults.sh
 
