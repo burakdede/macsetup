@@ -25,23 +25,24 @@ echo "updated the ~/.ssh/config file to cache the key"
 
 echo ""
 echo "---------------------------add new key to ssh agent------------------------------"
-ssh-add -K ~/.ssh/id_rsa
+ssh-add --apple-use-keychain ~/.ssh/id_rsa
 echo ""
 
 echo ""
 echo "---------------------------open github ui and add the ssh key------------------------------"
 echo "opening github settings to add ssh key."
 open https://github.com/settings/keys
-echo "waiting for 60 seconds to test the new ssh key with github"
-sleep 60
+echo "waiting for 30 seconds to test the new ssh key with github"
+sleep 30
 echo ""
 
 echo ""
 echo "---------------------------test the new ssh key with github------------------------------"
-ssh -T git@github.com -i ~/.ssh/github_rsa
+ssh -T git@github.com
 echo ""
 
 echo ""
 echo "---------------------------use osxkeychain for git---------------------------"
 git config --global credential.helper osxkeychain
+git config --list
 echo ""
