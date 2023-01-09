@@ -5,7 +5,7 @@
 ./scripts/brew-stuff.sh
 ./scripts/macappstore.sh
 ./scripts/sdk.sh
-./scripts/macos-settings.sh
+./scripts/os-defaults.sh
 
 echo ""
 echo "-------------------------------copying dotfiles to home directory of user----------------------------------"
