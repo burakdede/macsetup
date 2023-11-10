@@ -18,4 +18,7 @@
 	lol = log --all --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --graph --decorate --no-merges
 	lols = log --all --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --graph --decorate --stat --no-merges
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
+[init]
+	defaultBranch = main
+
