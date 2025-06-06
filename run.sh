@@ -7,7 +7,7 @@
 ./scripts/os-defaults.sh
 
 echo ""
-echo "-------------------------------copying dotfiles to home directory of user----------------------------------"
+echo "-------------------------------copying dotfiles to home directory of user-------------------------------------"
 cp -R dotfiles/ ~
 echo "--------------------------------------------------------------------------------------------------------------"
 
