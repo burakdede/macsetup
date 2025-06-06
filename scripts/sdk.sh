@@ -1,25 +1,33 @@
 #!/usr/bin/env bash
-#
+set -euo pipefail
+
 echo ""
 echo "-------------------------------install sdks and language runtimes-----------------------------------"
-curl -s "https://get.sdkman.io" | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
+if [ ! -d "$HOME/.sdkman" ]; then
+  curl -s "https://get.sdkman.io" | bash
+else
+  echo "SDKMAN already installed, skipping installation."
+fi
+
+if [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
+  source "$HOME/.sdkman/bin/sdkman-init.sh"
+else
+  echo "SDKMAN init script not found, aborting." >&2
+  exit 1
+fi
 echo ""
 
-echo ""
 echo "-------------------------------update sdkman and packages-----------------------------------"
-sdk selfupdate
-sdk update
+sdk selfupdate || echo "SDKMAN selfupdate failed."
+sdk update || echo "SDKMAN update failed."
 echo ""
 
-echo ""
 echo "-------------------------------install language, runtimes and frameworks-----------------------------------"
-sdk install java
-sdk install groovy
-sdk install scala
-sdk install kotlin
-sdk install springboot
-sdk install grails
-sdk install visualvm
-sdk install sbt
+for candidate in java groovy scala kotlin springboot grails visualvm sbt spark; do
+  if ! sdk list "$candidate" | grep -q '\*'; then
+    sdk install "$candidate" || echo "Failed to install $candidate."
+  else
+    echo "$candidate already installed, skipping."
+  fi
+done
 echo ""

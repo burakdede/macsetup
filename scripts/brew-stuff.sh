@@ -1,19 +1,27 @@
 #!/usr/bin/env bash
-#
-echo ""
-echo "-------------------------------signin to mac app store and install app store apps-----------------------------------"
-mas signin --dialog burak@burakdede.com
-sudo xcodebuild -license accept # agree on xcode license
-mas install 497799835 # Xcode
-mas install 937984704 # Amphetamine
-echo ""
+set -euo pipefail
 
 echo ""
 echo "--------------------------linking new vim version installed with brew-------------------------------"
-brew unlink vim && brew link vim
+if brew list vim &>/dev/null; then
+  brew unlink vim || echo "vim was not linked."
+  brew link vim || echo "Failed to link vim."
+else
+  echo "vim is not installed via brew, skipping link."
+fi
 echo ""
 
-echo ""
 echo "--------------------------updating brew and doing cleanup-------------------------------"
-brew doctor && brew update && brew cleanup -s 
-brew bundle
+if ! brew doctor; then
+  echo "brew doctor found issues. Please review the output above." >&2
+fi
+
+brew update
+brew cleanup -s
+
+if [ -f "$(dirname "$0")/../Brewfile" ]; then
+  brew bundle --file="$(dirname "$0")/../Brewfile"
+else
+  echo "Brewfile not found, skipping brew bundle." >&2
+fi
+echo ""

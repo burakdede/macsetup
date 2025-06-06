@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-#
+set -euo pipefail
+
+echo "-------------------------------starting the OS defaults setup process------------------------------------------"
 echo ""
 echo "-------------------------------set some OS defaults-----------------------------------"
 # picked from https://github.com/mathiasbynens/dotfiles/blob/master/.macos
@@ -73,7 +75,7 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+defaults write com.apple.screencapture location -string "${HOME}/Documents"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"

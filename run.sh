@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-#
+set -euo pipefail
+
+echo "-------------------------------starting the setup process---------------------------------------------------"
+echo "This script will install the necessary tools and configurations for your development environment."
 ./scripts/install.sh
 ./scripts/git.sh
 ./scripts/brew-stuff.sh
