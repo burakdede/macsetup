@@ -1,44 +1,55 @@
-# MacOS Machine Setup Guide
+# MacSetup
 
-> TL;DR just run `run.sh` and it will take care of the rest. I explained what each script does in the following sections if there is a need to run them individually.
+This repository automates the setup of a new macOS development environment. It installs essential developer tools, configures system defaults, sets up SSH and Git, installs CLI and GUI applications, and copies your dotfiles.
 
-## 1. Install OS
-- Here is the offical apple guide on how to do [it](https://support.apple.com/en-us/HT204904)
-- in short
-	- Restart machine and press `Cmd+R` to go into recovery mode
-	- Wipe out disk entirely using Disk Utility
-	- Reinstall OS using the option
+## What It Does
 
-## 2. Install Updates & Brew Package Manager
-- Run `install.sh`
-	- First it will install developer tools (includes stuff like gcc, gdb...)
-	- Tries to install pending updates if there are any
-	- Last step is to install `brew` package manager
+- Installs Xcode Command Line Tools and Homebrew (`scripts/install.sh`)
+- Installs and configures Git and SSH keys for GitHub (`scripts/git.sh`)
+- Installs CLI tools and desktop apps from the Brewfile (`scripts/brew-stuff.sh`, `Brewfile`)
+- Installs SDKs and language runtimes via SDKMAN (`scripts/sdk.sh`)
+- Applies sensible macOS system defaults (`scripts/os-defaults.sh`)
+- Copies dotfiles to your home directory (`run.sh`, `dotfiles/`)
 
-## 3. Git & Github
-- Run `git.sh`
-	- It will generate new ssh key for github and put into your clipboard
-	- Launches ssh agent and will ask it to cache the new key
-	- Opens github settings to enter the new ssh key for the new machine
-	- Test new ssh key against github
-- Official docs of github on how to add new ssh key
-	- [adding new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
-	- [adding new ssh key to github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
-	- [caching github password](https://help.github.com/en/github/using-git/caching-your-github-password-in-git)
-	- [create personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
+## Usage
 
-## 4. Command Line and Native Applications
-- Run `brew-stuff.sh` this will update and install all software required
-- It uses the `Brewfile` in the project root directory
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/yourusername/macsetup.git
+   cd macsetup
+   ```
 
-## 5. Mac App Store Applications
-- Run `macappstore.sh` to install mac app store apps
-	- Xcode, Amphetamine...
+2. **Run the setup script:**
+   ```bash
+   ./run.sh
+   ```
 
-## 6. Installing SDKs & Frameworks
-- Run `sdk.sh` to install latest versions of jvm languages and some of the web frameworks...
+   This will:
+   - Install Xcode tools and Homebrew
+   - Set up Git and SSH keys
+   - Install all CLI and GUI apps from the Brewfile
+   - Install SDKs and runtimes
+   - Apply macOS defaults
+   - Copy dotfiles to your home directory
 
-## 7. Change the MacOS Defaults
-- Run `os-defaults.sh` to set defaults to sensible alternatives
-	- eg. change hot corner settings, change how finder behaves, remove dock and animations...
-    - [enable spaces](https://support.apple.com/guide/mac-help/work-in-multiple-spaces-mh14112/mac) with keyboard shortcut
+3. **(Optional) Change your shell to the latest Bash:**
+   ```bash
+   echo "/usr/local/bin/bash" | sudo tee -a /etc/shells
+   chsh -s /usr/local/bin/bash
+   ```
+
+4. **Restart or log out for some changes to take effect.**
+
+## Customization
+
+- **To add or remove apps:**  
+  Edit the `Brewfile` and re-run `./scripts/brew-stuff.sh`.
+- **To change dotfiles:**  
+  Edit files in the `dotfiles/` directory.
+
+## Notes
+
+- Some steps may prompt for your password or require manual action (e.g., adding your SSH key to GitHub).
+- The scripts are idempotent and can be safely re-run.
+
+---
