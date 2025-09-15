@@ -47,6 +47,7 @@ brew "mongodb-database-tools"
 brew "moreutils"
 brew "mariadb", restart_service: true
 brew "mysql@8.0", restart_service: true
+brew "neovim"
 brew "nmap"
 brew "node"
 brew "nomad"
@@ -75,12 +76,14 @@ brew "watch"
 brew "watchman"
 brew "wget"
 brew "wireshark"
+brew "zellij"
 
 ########################################################################
 # Apps                                                                 #
 ########################################################################
 cask "alacritty"
 cask "alfred"
+cask "dash"
 cask "discord"
 cask "docker"
 cask "firefox"
