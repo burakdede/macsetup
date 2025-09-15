@@ -78,6 +78,7 @@ brew "wireshark"
 ########################################################################
 # Apps                                                                 #
 ########################################################################
+cask "alacritty"
 cask "alfred"
 cask "discord"
 cask "docker"
@@ -97,4 +98,5 @@ cask "visual-studio-code"
 cask "visualvm"
 cask "vlc"
 cask "whatsapp"
+cask "zed"
 cask "zoom"
