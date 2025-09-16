@@ -10,13 +10,19 @@ echo "This script will install the necessary tools and configurations for your d
 ./scripts/os-defaults.sh
 
 echo ""
-echo "-------------------------------copying dotfiles to home directory of user-------------------------------------"
-cp -R dotfiles/ ~
-echo "--------------------------------------------------------------------------------------------------------------"
+echo "-------------------------------creating symlinks for dotfiles and configs-------------------------------------"
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 
-echo ""
-echo "-------------------------------copying config files to home directory of user---------------------------------"
-cp -R configs/.config ~
+echo "Symlinking files from dotfiles/ directory..."
+for dotfile in "$SCRIPT_DIR"/dotfiles/.[!.]*; do
+    filename=$(basename "$dotfile")
+    ln -sfn "$dotfile" "$HOME/$filename"
+    echo "  Linked $filename"
+done
+
+echo "Symlinking configs/.config directory..."
+ln -sfn "$SCRIPT_DIR/configs/.config" "$HOME/.config"
+echo "  Linked .config directory"
 echo "--------------------------------------------------------------------------------------------------------------"
 
 echo ""
