@@ -1,0 +1,60 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/aura.toml"
+]
+live_config_reload = true
+working_directory = "~/"
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+dynamic_padding = false
+dynamic_title = true
+decorations_theme_variant = "Dark"
+decorations = "None"
+opacity = 1
+startup_mode = "Maximized"
+
+[window.dimensions]
+columns = 150
+lines = 60
+
+[window.padding]
+x = 25
+y = 25
+
+[font]
+size = 15.0
+
+[font.offset]
+x = 1
+y = 1
+
+[font.bold]
+family = "Monaspace Argon" 
+style = "Bold"
+
+[font.bold_italic]
+family = "Monaspace Argon"
+style = "Bold Italic"
+
+[font.italic]
+family = "Monaspace Argon"
+style = "Italic"
+
+[font.normal]
+family = "Monaspace Argon"
+style = "Regular"
+
+[cursor]
+style = { shape = "Block", "blinking" = "On" } 
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[scrolling]
+history = 100000
+
+[selection]
+save_to_clipboard = true

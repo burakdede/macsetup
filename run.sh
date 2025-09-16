@@ -15,6 +15,11 @@ cp -R dotfiles/ ~
 echo "--------------------------------------------------------------------------------------------------------------"
 
 echo ""
+echo "-------------------------------copying config files to home directory of user---------------------------------"
+cp -R configs/.config ~
+echo "--------------------------------------------------------------------------------------------------------------"
+
+echo ""
 echo "-------------------------------if you need to update bash to latest version-----------------------------------"
 echo "run	echo "/usr/local/bin/bash" >> /etc/shells"
 echo "run 	chsh -s /usr/local/bin/bash"
