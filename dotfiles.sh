@@ -47,8 +47,9 @@ backup_target() {
     [[ ! -e "$target" && ! -L "$target" ]] && return 0
 
     # Skip symlinks already pointing into our dotfiles dir.
+    # Use plain readlink (not -f) — macOS BSD readlink does not support -f.
     if [[ -L "$target" ]] && \
-       [[ "$(readlink -f "$target" 2>/dev/null)" == "$DOTFILES_DIR"* ]]; then
+       [[ "$(readlink "$target" 2>/dev/null)" == "$DOTFILES_DIR"* ]]; then
         return 0
     fi
 

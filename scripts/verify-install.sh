@@ -163,11 +163,19 @@ else
 fi
 
 # ── Agents ────────────────────────────────────────────────────────────────────
-echo_header "Coding agents (MCP)"
-if [[ -f "$HOME/.claude.json" ]]; then
-    check "~/.claude.json" "ok"
+echo_header "Coding agents"
+check_cmd "claude (Claude Code)" "claude"
+check_cmd "codex"                "codex"
+check_cmd "opencode"             "opencode"
+check_symlink "~/.config/agents"             "$HOME/.config/agents"
+check_symlink "~/.config/mise"               "$HOME/.config/mise"
+
+if [[ -L "$HOME/.claude/CLAUDE.md" ]]; then
+    check "~/.claude/CLAUDE.md → central instructions" "ok"
+elif [[ -f "$HOME/.claude/CLAUDE.md" ]]; then
+    check "~/.claude/CLAUDE.md → central instructions" "exists but not a symlink — re-run agents step"
 else
-    check "~/.claude.json" "missing — run agents step"
+    check "~/.claude/CLAUDE.md → central instructions" "missing — run agents step"
 fi
 
 # ── Summary ───────────────────────────────────────────────────────────────────

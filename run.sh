@@ -16,7 +16,7 @@
 #  6. multiplexer — tmux config wiring + TPM (Tmux Plugin Manager)
 #  7. terminal    — WezTerm via Homebrew Cask
 #  8. sdk         — SDKMAN (Java, Kotlin, …)
-#  9. agents      — MCP server config for Claude Code and Codex
+#  9. agents      — Claude Code, Codex, OpenCode — install checks + central config symlinks
 # 10. git         — GitHub SSH key setup (interactive; skippable)
 # 11. macos       — macOS system defaults via `defaults write` (skippable)
 #
@@ -77,7 +77,7 @@ Valid STEP values (run in this order on a fresh machine):
   multiplexer     Tmux config wiring + TPM (Tmux Plugin Manager)
   terminal        WezTerm via Homebrew Cask
   sdk             SDKMAN toolchain (Java, Kotlin, …)
-  agents          MCP server config for Claude Code and Codex
+  agents          Claude Code, Codex, OpenCode — install checks + central config symlinks
   git             GitHub SSH key setup (interactive)
   macos           macOS system defaults via 'defaults write'
 
@@ -86,7 +86,7 @@ Dependencies:
   - Run dotfiles before configure, shell, editor, multiplexer, terminal.
   - Run shell before terminal (terminal picks up the new default shell).
   - Run sdk before editor if you use Java LSP in Neovim (jdtls needs a JDK).
-  - Run system before agents (agents needs npm/node).
+  - Run system before agents (agents needs brew for codex/opencode casks).
 
 Environment variable overrides:
   MACSETUP_UPGRADE=1           Re-install tools even if already present.
@@ -215,7 +215,7 @@ main() {
         "multiplexer|$ROOT_DIR/multiplexer/multiplexer.sh|Tmux multiplexer"
         "terminal|$ROOT_DIR/terminal/terminal.sh|WezTerm terminal emulator"
         "sdk|$ROOT_DIR/sdk/sdk.sh|SDKMAN toolchain"
-        "agents|$ROOT_DIR/agents/agents.sh|Coding agent MCP configuration"
+        "agents|$ROOT_DIR/agents/agents.sh|Coding agents (Claude Code, Codex, OpenCode)"
     )
 
     [[ $INCLUDE_GIT -eq 1 ]]   && steps+=("git|$ROOT_DIR/git/git.sh|GitHub SSH setup")
