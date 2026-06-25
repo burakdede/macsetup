@@ -95,6 +95,9 @@ install_home_dotfiles() {
 
         # Skip the .config sub-directory (handled separately above).
         [[ "$name" == ".config" ]] && continue
+        # Skip the repo's own .gitignore — it's internal to the dotfiles repo.
+        # The global gitignore is .gitignore_global (referenced in .gitconfig).
+        [[ "$name" == ".gitignore" ]] && continue
 
         link_path "$path" "$HOME/$name"
     done
