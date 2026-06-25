@@ -84,6 +84,10 @@ check_cmd "bat"       "bat"
 check_cmd "fd"        "fd"
 check_cmd "fzf"       "fzf"
 check_cmd "gh (GitHub CLI)" "gh"
+check_cmd "just (task runner)" "just"
+check_cmd "direnv"             "direnv"
+check_cmd "shfmt"              "shfmt"
+check_cmd "uv (Python)"        "uv"
 
 # ── Runtime manager ───────────────────────────────────────────────────────────
 echo_header "mise"

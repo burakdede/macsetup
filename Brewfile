@@ -59,6 +59,12 @@ brew "mise"      # runtime version manager (node, python, go, …)
 brew "sd"        # better sed
 brew "yq"        # YAML processor
 
+# Coding agent productivity
+brew "just"    # task runner — agents call `just <task>` without parsing Makefiles
+brew "direnv"  # per-directory env vars — agents cd in and env is automatically set
+brew "shfmt"   # shell script formatter — agents write shell; this keeps it correct
+brew "uv"      # Python package manager — de facto standard, replaces pip/venv/pyenv
+
 ########################################################################
 # Apps                                                                 #
 ########################################################################
