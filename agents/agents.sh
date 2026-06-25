@@ -118,7 +118,7 @@ mkdir -p "$HOME/.codex"
 
 if [[ ! -f "$CODEX_CONFIG" ]]; then
     cat > "$CODEX_CONFIG" <<'EOF'
-model                  = "gpt-5.4"
+model                  = "o4-mini"
 personality            = "pragmatic"
 model_reasoning_effort = "medium"
 approvals_reviewer     = "user"
