@@ -39,7 +39,8 @@ fi
 echo_header "macOS system defaults"
 
 # Close System Preferences to prevent interference.
-osascript -e 'tell application "System Preferences" to quit' 2>/dev/null || true
+osascript -e 'tell application "System Settings" to quit' 2>/dev/null || \
+    osascript -e 'tell application "System Preferences" to quit' 2>/dev/null || true
 
 ensure_sudo
 
@@ -123,8 +124,6 @@ sudo chflags nohidden /Volumes
 # Dock                                                                        #
 ###############################################################################
 
-defaults write com.apple.dashboard mcx-disabled -bool true
-defaults write com.apple.dock dashboard-in-overlay -bool true
 defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0

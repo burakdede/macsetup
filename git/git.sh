@@ -19,14 +19,12 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/../utils/utils.sh"
 
 github_ssh_auth_works() {
-    local ssh_output ssh_exit_code
+    local ssh_output
     set +e
     if command_exists timeout; then
         ssh_output="$(timeout 15 ssh -T git@github.com -o ConnectTimeout=10 -o BatchMode=yes -o StrictHostKeyChecking=accept-new 2>&1)"
-        ssh_exit_code=$?
     else
         ssh_output="$(ssh -T git@github.com -o ConnectTimeout=10 -o BatchMode=yes -o StrictHostKeyChecking=accept-new 2>&1)"
-        ssh_exit_code=$?
     fi
     set -e
 
