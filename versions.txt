@@ -1,0 +1,13 @@
+# Tool version pins for macsetup.
+#
+# These are read by step scripts via load_versions() in utils/utils.sh.
+# Update a version here and re-run the relevant step to upgrade the tool.
+#
+# Note: tools installed via Homebrew (neovim, wezterm, tmux) are version-
+# controlled by Homebrew, not this file.  The versions below are used only
+# for health-check comparisons in verify-install.sh.
+
+NEOVIM_VERSION=0.11.5
+MISE_VERSION=2025.11.11
+NODE_VERSION=24.14.1
+NERD_FONTS_VERSION=3.3.0

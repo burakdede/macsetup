@@ -1,0 +1,7 @@
+# SDKMAN candidates to install.
+# One candidate name per line; comments with #.
+# SDKMAN will install the latest stable version of each.
+# To pin a version, install it manually: sdk install java 21.0.3-tem
+
+java
+kotlin

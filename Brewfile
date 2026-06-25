@@ -33,11 +33,9 @@ brew "maven-completion"
 brew "moreutils"
 brew "neovim"
 brew "nmap"
-brew "node"
 brew "openssl@3"
 brew "pip-completion"
 brew "protobuf"
-brew "pyenv"
 brew "readline"
 brew "ripgrep"
 brew "shellcheck"
@@ -47,16 +45,25 @@ brew "terraform"
 brew "tmux"
 brew "tree"
 brew "vault"
-brew "vim"
 brew "wget"
 brew "wireshark"
-brew "zellij"
+brew "zsh"
+
+# Modern CLI replacements (same as linux-setup apt packages)
+brew "bat"       # better cat with syntax highlighting
+brew "eza"       # better ls (replaces exa)
+brew "fd"        # better find
+brew "fzf"       # fuzzy finder (used by shell keybindings)
+brew "mise"      # runtime version manager (node, python, go, …)
+brew "sd"        # better sed
+brew "yq"        # YAML processor
 
 ########################################################################
 # Apps                                                                 #
 ########################################################################
 cask "antigravity"
 cask "alacritty"
+cask "wezterm"                     # primary terminal emulator
 cask "alfred"
 cask "docker"
 cask "docker-desktop"
@@ -65,6 +72,7 @@ cask "google-chrome"
 cask "github"
 cask "jetbrains-toolbox"
 cask "font-monaspace"
+cask "font-jetbrains-mono-nerd-font"  # required by WezTerm + neovim UI icons
 cask "maccy"
 cask "ngrok"
 cask "nordvpn"
